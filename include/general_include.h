@@ -18,8 +18,7 @@
    #define AGGRESSOR 1 
    #define VICTIM 0 
 
-   // Time sources
-   #define PMU 1     
+   // Time sources    
    #define CLOCK  2  
 
 #endif
