@@ -25,7 +25,7 @@ fi
 host=`hostname`
 nb_core=0
 
-if [ $host = "TimeBerry" ] ||  [ $host = "ls1043ardb" ] ||  [ $host = "imx8" ] ||  [ $host = "imx8mpevk" ]; then
+if [ $host = "TimeBerry" ] ||  [ $host = "ls1043ardb" ] ||  [ $host = "imx8" ] ||  [ $host = "imx8mpevk" ] || [ $host = "WDTIS2200H" ] ; then
     nb_core=4
 fi
 if [ $host = "j7200-evm" ] ||  [ $host = "am64xx-evm" ]; then

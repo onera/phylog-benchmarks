@@ -40,6 +40,8 @@ Benchmark are configured through macros in the `include/parameters.h` header:
 
 - `STRIDE_MAX` (default: `2048`): Maximal value of stride used by the load and store micro-benchmarks (must be a power of 2). `REPEAT` measurements will be performed for each value of stride from 1 to `STRIDE_MAX`.
 
+Platform configuration is provided by the `scripts/var_generique.sh`. In particular one should identify the number of cores available for each possible host.
+
 
 ## Organisation
 
