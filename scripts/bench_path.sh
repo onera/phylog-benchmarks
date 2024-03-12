@@ -1,0 +1,14 @@
+#!/bin/bash
+
+BENCHMARKS=$(pwd)
+float_cpu_microbenchmark_path=${BENCHMARKS}/benchmarks/CPU/float_cpu_microbenchmark
+double_cpu_microbenchmark_path=${BENCHMARKS}/benchmarks/CPU/double_cpu_microbenchmark
+int_cpu_microbenchmark_path=${BENCHMARKS}/benchmarks/CPU/int_cpu_microbenchmark
+long_cpu_microbenchmark_path=${BENCHMARKS}/benchmarks/CPU/long_cpu_microbenchmark
+
+add_load_microbenchmark_path=${BENCHMARKS}/benchmarks/Load/add_load_microbenchmark
+deterministic_index_chasing_load_microbenchmark_path=${BENCHMARKS}/benchmarks/Load/deterministic_index_chasing_load_microbenchmark
+random_index_chasing_load_microbenchmark_path=${BENCHMARKS}/benchmarks/Load/random_index_chasing_load_microbenchmark
+
+add_store_microbenchmark_path=${BENCHMARKS}/benchmarks/Store/add_store_microbenchmark
+
