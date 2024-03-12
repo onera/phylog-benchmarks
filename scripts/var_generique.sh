@@ -1,10 +1,24 @@
 # $1 = processor to be tested
 #!/bin/bash
 
-RESULT=$BENCHMARKS/Results/$1
+if [ "$#" -lt 1 ] ; then
+    echo "*** Error: No processor specified"
+    exit 1
+fi
 
-if [ ! -d $RESULT ]; then
-    echo "*** Error: Processor $1 unknown in Results"
+RESULT="$BENCHMARKS/Results/$1"
+
+if [ ! -d "$RESULT" ]; then
+    read -p "Create the missing result directory '$RESULT' (y/n)? " -n 1 -r CREATE_RESULT
+    echo    
+    if [[ $CREATE_RESULT =~ ^[Yy]$ ]]
+    then
+        mkdir -p "$RESULT"
+    fi
+fi
+
+if [ ! -d "$RESULT" ]; then
+    echo "*** Error: Unknown Processor '$1' in Results directory"
     exit 0
 fi
 
@@ -17,3 +31,8 @@ fi
 if [ $host = "j7200-evm" ] ||  [ $host = "am64xx-evm" ]; then
     nb_core=2
 fi
+
+if [ "$#" -lt 1 ] ; then
+    echo "*** Error: Unknown number of cores for host '$host'"
+    exit 1
+fi 

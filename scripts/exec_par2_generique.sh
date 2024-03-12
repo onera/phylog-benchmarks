@@ -36,7 +36,7 @@ function exec_par2_generique(){
     
     cd $BENCHWORKINGSPACE
     # echo "--> exec: victim ($FUNCTION) + aggressor ($AGGRESSOR1) > $RESULT/${FUNCTION}_${AGGRESSOR1}_$1.txt"
-    taskset -c 0 ./victim_${FUNCTION} > $RESULT/${FUNCTION}_${AGGRESSOR1}_$1.txt
+    taskset -c 0 ./victim_${FUNCTION} > "$RESULT/${FUNCTION}_${AGGRESSOR1}_$1.txt"
 
     kill $pid_agresseur1
     cd $AGGRESSOR1WORKINGSPACE

@@ -73,7 +73,7 @@ function exec_par4_generique(){
 
     cd $BENCHWORKINGSPACE
     # echo "--> exec: victim ($FUNCTION) + aggressor ($AGGRESSOR1) + aggressor ($AGGRESSOR2) + aggressor ($AGGRESSOR3) > $RESULT/${FUNCTION}_${AGGRESSOR1}_$1_${AGGRESSOR2}_$2_${AGGRESSOR3}_$3.txt"
-    taskset -c 0 ./victim_${FUNCTION} > $RESULT/${FUNCTION}_${AGGRESSOR1}_$1_${AGGRESSOR2}_$2_${AGGRESSOR3}_$3.txt
+    taskset -c 0 ./victim_${FUNCTION} > "$RESULT/${FUNCTION}_${AGGRESSOR1}_$1_${AGGRESSOR2}_$2_${AGGRESSOR3}_$3.txt"
 
     kill $pid_agresseur1
     kill $pid_agresseur2
